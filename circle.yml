@@ -10,7 +10,7 @@ dependencies:
   override:
     - docker info
     - docker -v
-    - docker build -t muhaha3/votingapp_vote .
+    - docker build -t muhaha03/votingapp_vote .
 test:
   override:
     - curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > ./docker-compose
@@ -24,4 +24,4 @@ deployment:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push muhaha3/votingapp_vote
+      - docker push muhaha03/votingapp_vote
